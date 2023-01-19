@@ -1,0 +1,65 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "d90d474021ca104141106f759f913166",
+    "packages": [
+        {
+            "name": "nuovatech/neon",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Nuovatechbr/neon.git",
+                "reference": "b0545fa8b639159efee24cb0b67ab38682fe444b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Nuovatechbr/neon/zipball/b0545fa8b639159efee24cb0b67ab38682fe444b",
+                "reference": "b0545fa8b639159efee24cb0b67ab38682fe444b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Nuovatech\\Neon\\": "core/",
+                    "Nuovatech\\Neon\\Sample\\": "app/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Eduardo Marinho",
+                    "email": "nuovatech@outlook.com"
+                }
+            ],
+            "description": "Framework PHP",
+            "support": {
+                "issues": "https://github.com/Nuovatechbr/neon/issues",
+                "source": "https://github.com/Nuovatechbr/neon/tree/master"
+            },
+            "time": "2023-01-19T06:32:06+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "nuovatech/neon": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=7.4"
+    },
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
+}

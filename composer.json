@@ -1,0 +1,22 @@
+{
+    "name": "nuovatech/modern",
+    "authors": [
+        {
+            "name": "Eduardo Marinho",
+            "email": "nuovatech@outlook.com"
+        }
+    ],
+    "description": "Tema modern do Neon Framework",
+    "license": "GPL-3.0-or-later",
+    "autoload": {
+        "psr-4": {
+            "Nuovatech\\Template\\Modern\\": "core/"
+        }
+    },
+    "require": {
+        "php": ">=7.4",
+        "nuovatech/neon": "dev-master"
+
+    },
+    "version": "1.0.0.20230119"
+}
