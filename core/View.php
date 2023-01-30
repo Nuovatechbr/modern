@@ -7,11 +7,20 @@ use \Nuovatech\Neon\View as NeonView;
 use \Nuovatech\Neon\Neon;
 use \Nuovatech\Neon\Tools;
 
+/**
+ * Manager the view interface of Neon Viewer Template
+ */
 abstract class View extends NeonView
 {
-    public static function module()
+    /**
+     * Load javascript module the application
+     * @param string $path Path or URL the javascrip file.
+     * @param string $type extenssion of the file.
+     */
+    public static function module(string $path, string $type = "js")
     {
-        # code...
+        $path = $_SERVER['REQUEST_SCHEME'] . "://" .  $_SERVER['SERVER_NAME'] .  $_SERVER["REQUEST_URI"] . "public/assets/script/$path.$type";
+        print_r("<script src='$path' type='module'></script> \r");
     }
 
     /**
