@@ -1,0 +1,10 @@
+@media all {
+    .modern-template-main {
+        display: flex;
+        flex: 1;
+        height: calc(100vh - 60px);
+        padding-top: 60px;
+        position: relative;
+        z-index: 0;
+    }
+}

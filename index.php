@@ -4,4 +4,4 @@ use Nuovatech\Template\Modern\View;
 
 require_once "vendor/autoload.php";
 
-View::template();
+View::render("acess");

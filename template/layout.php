@@ -1,3 +1,8 @@
+<?php
+
+use \Nuovatech\Template\Modern\View;
+
+?>
 <!DOCTYPE html>
 
 <html lang="pt-br">
@@ -7,7 +12,7 @@
     <meta charset="UTF-8">
     <meta content="Nuovatech" name="author">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
+    <link href="vendor/nuovatech/modern/assets/css/core.css" rel="stylesheet" type="text/css">
     <title><?php echo "teste"; ?></title>
 
     <!-- Importação do ícone do template. -->
@@ -18,52 +23,35 @@
 
 <body class="modern-template">
 
-    <div class="modern-template-navigation">
-        <aside class="modern-template-aside-navigation">
+    <!-- Application container -->
+    <div class="modern-template-container">
 
-            <div class="row">
-                <div class="col-12">
-                    <figure class="modern-template-aside-navigation-container-logo">
-                        <img alt="Logo do sistema" src="public/assets/images/logo.png">
-                    </figure>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-12">
-                </div>
-            </div>
-        </aside>
-    </div>
-
-    <div class="modern-template-body">
-
+        <!-- Header of application -->
         <header class="modern-template-header">
-            <div class="modern-template-header-col">
-                <figure class="modern-template-header-figure">
-                    <img src="public/assets/images/logo.png">
-                </figure>
+
+            <div class="modern-template-header-area">
+                <button id="modern-template-btn-menu" title="Menu de navegação" type="button"></button>
             </div>
-            <div class="modern-template-header-col">
-                <button class="modern-template-btn-menu" id="modern-btn-menu" title="Menu" type="button"></button>
+
+            <div class="modern-template-header-area"></div>
+
+            <div class="modern-template-header-area">
+                <button id="modern-template-btn-user" title="Menu de usuário" type="button"></button>
             </div>
         </header>
 
-        <!-- Inclui o corpo das visões que serão carregadas -->
+        <!-- Main of application -->
         <main class="modern-template-main">
+
+            <!-- Contain the navigation menu -->
+            <aside class="modern-template-sidebar"></aside>
+
+            <!-- Content of application -->
+            <aside class="modern-template-content">
+                <?php echo View::getBody(); ?>
+            </aside>
         </main>
     </div>
-
-    <script src="templates\modern\assets\script\layout.js"></script>
 </body>
-<style>
-    body {
-        background-color: #f2f2f2;
-        padding: 0;
-    }
-    .modern-template-navigation {
-        background-color: red;
-    }
-</style>
 
 </html>

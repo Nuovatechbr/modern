@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Nuovatechbr/neon.git",
-                "reference": "8afca0350eda1ad9e5a0605ff0020dc2fcb70bd1"
+                "reference": "7e2ba22da43e5ffb345cc9df103674624e4c8223"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Nuovatechbr/neon/zipball/8afca0350eda1ad9e5a0605ff0020dc2fcb70bd1",
-                "reference": "8afca0350eda1ad9e5a0605ff0020dc2fcb70bd1",
+                "url": "https://api.github.com/repos/Nuovatechbr/neon/zipball/7e2ba22da43e5ffb345cc9df103674624e4c8223",
+                "reference": "7e2ba22da43e5ffb345cc9df103674624e4c8223",
                 "shasum": ""
             },
             "require": {
@@ -46,7 +46,7 @@
                 "issues": "https://github.com/Nuovatechbr/neon/issues",
                 "source": "https://github.com/Nuovatechbr/neon/tree/master"
             },
-            "time": "2023-01-19T14:37:55+00:00"
+            "time": "2023-01-30T19:49:43+00:00"
         }
     ],
     "packages-dev": [],

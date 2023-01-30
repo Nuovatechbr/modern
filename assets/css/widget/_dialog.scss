@@ -1,0 +1,103 @@
+@media all {
+    div.neon-dialog {
+        background-color: var(--dialog-bg) !important;
+        box-shadow: 0 0.76875rem 2.4875rem rgba(52, 58, 64, 0.3), 0 1.3375rem 1.70625rem rgba(52, 58, 64, 0.3),
+            0 0.55rem 0.53125rem rgba(0, 0, 0, 0.05), 0 0.225rem 0.4375rem rgba(52, 58, 64, 0.3);
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        font-family: var(--dialog-font);
+        min-width: 250px;
+        max-width: 500px;
+
+        div.neon-dialog__header {
+            color: var(--dialog-header-color);
+            height: min-content;
+            padding: 40px 15px 10px 15px;
+            text-align: center;
+
+            *.neon-dialog__header__title {
+                color: var(--dialog-title);
+                font-size: 20px !important;
+                font-weight: normal !important;
+                margin: 0 !important;
+            }
+
+            button {
+                background-color: transparent !important;
+                border: none;
+                border-radius: 100%;
+                color: #5c5c5c;
+                cursor: pointer;
+                filter: opacity(40%);
+                float: right;
+                font-size: 18px !important;
+                font-weight: normal !important;
+                height: 28px !important;
+                line-height: 18px;
+                margin-right: -10px;
+                margin-top: -70px;
+                padding: 0px 10px;
+                text-align: center;
+                transition: ease-in 0.3s;
+                width: 28px !important;
+
+                &:focus,
+                &:hover {
+                    filter: opacity(80%);
+                }
+            }
+        }
+
+        div.neon-dialog__body {
+            padding: 16px 32px !important;
+            text-align: center;
+            p {
+                color: var(--body-color);
+                font-size: 16px !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+        }
+
+        div.neon-dialog__footer {
+            display: flex;
+            padding: 16px 32px;
+            justify-content: center;
+
+            button.neon-dialog__btn {
+                background-color: var(--primary-color);
+                border: none;
+                border-radius: 100px;
+                color: #fff;
+                cursor: pointer;
+                filter: saturate(100%);
+                font-size: 14px;
+                font-weight: bold;
+                line-height: 14px;
+                margin-left: 5px;
+                padding: 10px 12px;
+                transition: ease-in 0.3s;
+                width: 100%;
+                max-width: 120px;
+
+                &.--close {
+                    background-color: var(--dialog-btn-close-bg);
+                    color: var(--dialog-btn-close-color);
+                }
+                &.--cancel {
+                    background-color: var(--dialog-btn-cancel-bg);
+                    color: var(--dialog-btn-cancel-color);
+                    &:focus,
+                    &:hover {
+                        filter: saturate(80%);
+                    }
+                }
+                &:focus,
+                &:hover {
+                    filter: saturate(50%);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+@media all {
+    .neon-modal {
+        align-items: center !important;
+        background-color: rgba(9, 30, 66, 0.54);
+        display: flex !important;
+        justify-content: center !important;
+        height: 100vh;
+        left: 0;
+        overflow-y: auto;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+    }
+}

@@ -1,0 +1,23 @@
+@media all {
+    aside {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    aside.modern-template-sidebar {
+        background-image: linear-gradient(to left, #1904e590, #11998e90);
+        box-shadow: 7px 0 60px rgba(0, 0, 0, 0.05);
+        flex: 0 0 280px;
+        margin-top: -60px;
+        min-width: 280px;
+        overflow: hidden;
+        padding-top: 60px;
+        position: relative;
+        transition: all 0.2s;
+        width: 280px;
+        z-index: 11;
+    }
+    aside.modern-template-content {
+        width: calc(100);
+    }
+}

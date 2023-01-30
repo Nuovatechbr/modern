@@ -1,0 +1,46 @@
+@media all {
+    header.modern-template-header {
+        background: #fafbfc;
+        box-shadow: 0 0.46875rem 2.1875rem rgba(4, 9, 20, 0.03), 0 0.9375rem 1.40625rem rgba(4, 9, 20, 0.03),
+            0 0.25rem 0.53125rem rgba(4, 9, 20, 0.05), 0 0.125rem 0.1875rem rgba(4, 9, 20, 0.03);
+        display: flex;
+        flex-direction: row;
+        height: 60px;
+        position: fixed;
+        top: 0;
+        transition: all 0.2s;
+        width: 100%;
+        z-index: 1;
+
+        div.modern-template-header-area {
+            width: 100%;
+            &:first-child,
+            &:last-child {
+                width: 60px !important;
+            }
+        }
+
+        // Action Buttons
+        button#modern-template-btn-menu {
+            background-color: transparent;
+            border: 0px;
+            cursor: pointer;
+            height: 60px;
+            margin: 0;
+            width: 60px;
+
+            &:hover {
+                background-color: #ccc;
+                transition: ease-in-out 0.3s;
+            }
+        }
+
+        button#modern-template-btn-user {
+            border: 0px;
+            cursor: pointer;
+            height: 60px;
+            margin: 0;
+            width: 60px;
+        }
+    }
+}

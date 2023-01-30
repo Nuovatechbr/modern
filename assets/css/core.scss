@@ -1,0 +1,39 @@
+// Import of general classes
+@import "lib/common";
+
+// Import of structure css
+@import "structure/aside";
+@import "structure/body";
+@import "structure/header";
+@import "structure/main";
+
+// Import of widgets css
+@import "widget/card";
+@import "widget/dialog";
+@import "widget/page";
+@import "widget/modal";
+
+:root {
+    --primary-color: #1904e5;
+    --secondary-color: #11998e;
+    --body-color: #5c5c5c;
+    --btn-cancel: #c0392b;
+    --btn-cancel-text-color: rgba(255, 255, 255, 1);
+    --btn-confirm: rgba(0, 89, 72, 1);
+    --btn-confirm-text-color: rgba(255, 255, 255, 1);
+    --btn-return: #efeff2;
+    --btn-return-text-color: #5c5c5c;
+    --colorEmerald: rgb(49, 155, 84);
+    --dialog-title: var(--primary_color);
+    --dialog-bg: #fff;
+    --dialog-btn-close-color: #fff;
+    --dialog-btn-close-bg: rgba(1, 60, 76, 1);
+    --dialog-btn-cancel-bg: #ccc;
+    --dialog-btn-cancel-color: #fff;
+    --navigation-bgc: rgba(1, 60, 76, 1);
+    --navigation-bgc-hover: #a37f00;
+    --navigation-parent-bgc: #001116;
+    --navigation-link-color: #fff;
+    --neon-table-thead-bgc: var(--secondary-color);
+    --neon-table-thead-text-color: #fff;
+}
