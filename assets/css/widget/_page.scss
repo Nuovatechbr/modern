@@ -1,9 +1,64 @@
 // Used by define an information area in one page
 @media all {
-    .modern-template-page {
-        background-color: rgba(255,255,255,.45);
+    .template-page-header {
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.45);
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
         padding: 30px;
-        position: relative;
         width: auto;
+
+        .template-page-header-icon,
+        .template-page-header-info,
+        .template-page-header-action {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .template-page-header-icon {
+            width: max-content !important;
+
+            figure {
+                background-color: #fff;
+                box-shadow: 0 0.46875rem 2.1875rem rgba(4, 9, 20, 0.03), 0 0.9375rem 1.40625rem rgba(4, 9, 20, 0.03),
+                    0 0.25rem 0.53125rem rgba(4, 9, 20, 0.05), 0 0.125rem 0.1875rem rgba(4, 9, 20, 0.03);
+                display: flex;
+                justify-content: center;
+                vertical-align: middle;
+                height: 52px;
+                width: 52px;
+                margin: 0;
+
+                i {
+                    display: block;
+                    font-size: 24px;
+                    line-height: 32px;
+                    margin: auto;
+                }
+            }
+        }
+
+        .template-page-header-info {
+            .template-page-header-title {
+                font-size: 1.25rem;
+                font-weight: 400;
+                line-height: 1.5;
+                color: #495057;
+            }
+            .template-page-header-subtitle {
+                padding: 3px 0 0;
+                font-size: 0.88rem;
+                opacity: 0.6;
+            }
+        }
+
+        .template-page-action {
+            align-items: end;
+            flex-direction: row;
+            width: auto !important;
+        }
     }
 }

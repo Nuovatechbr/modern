@@ -1,0 +1,38 @@
+@media all {
+    table.modern-table {
+        border-collapse: collapse;
+        width: 100%;
+
+        thead.modern-table-thead tr {
+            filter: opacity(50%);
+            text-align: left;
+            th {
+                font-size: 14px;
+                line-height: 18px;
+                padding: 10px;
+            }
+        }
+
+        tbody.modern-table-tbody {
+            font-size: 12px;
+
+            tr {
+                &:hover {
+                    background-color: #e0f3ff !important;
+                    transition: ease-in 0.4s;
+                }
+                &:nth-child(odd) {
+                    background-color: #f7f7f7;
+                }
+                &:nth-child(even) {
+                    border-bottom: 1px solid #f1f1f1;
+                }
+                td {
+                    color: #5c5c5c;
+                    line-height: 20px;
+                    padding: 0.55rem;
+                }
+            }
+        }
+    }
+}

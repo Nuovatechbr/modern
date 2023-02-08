@@ -24,8 +24,10 @@
         button#modern-template-btn-menu {
             background-color: transparent;
             border: 0px;
+            color: #3c3c3c;
             cursor: pointer;
             height: 60px;
+            font-size: 24px;
             margin: 0;
             width: 60px;
 
@@ -36,11 +38,19 @@
         }
 
         button#modern-template-btn-user {
+            background-color: transparent;
             border: 0px;
+            color: #3c3c3c;
             cursor: pointer;
+            font-size: 24px;
             height: 60px;
             margin: 0;
+            transition: ease-in-out 0.3s;
             width: 60px;
+
+            &:hover {
+                background-color: #ccc;
+            }
         }
     }
 }

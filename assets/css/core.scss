@@ -1,17 +1,24 @@
 // Import of general classes
+@import "lib/colors";
 @import "lib/common";
+@import "lib/icons";
 
 // Import of structure css
 @import "structure/aside";
 @import "structure/body";
 @import "structure/header";
 @import "structure/main";
+@import "structure/navigation";
 
 // Import of widgets css
+@import "widget/badge";
+@import "widget/buttons";
 @import "widget/card";
 @import "widget/dialog";
 @import "widget/page";
 @import "widget/modal";
+@import "widget/table";
+@import "widget/workspace";
 
 :root {
     --primary-color: #1904e5;

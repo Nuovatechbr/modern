@@ -4,8 +4,6 @@ export {
     Dialog
 }
 
-var t = "adasd";
-
 var Dialog = {
 
     // Key do dialog
@@ -36,7 +34,7 @@ var Dialog = {
             dialog.append(dialogHeader);
 
             //Dialog Close
-            let btnClose = document.createElement("button");
+            /*let btnClose = document.createElement("button");
             btnClose.title = "Fechar Janela";
             btnClose.innerText = 'x';
             btnClose.type = "button";
@@ -51,6 +49,7 @@ var Dialog = {
                 });
             }
             dialogHeader.append(btnClose);
+            */
 
             //Dialog Body
             let dialogBody = document.createElement("div");
@@ -74,7 +73,6 @@ var Dialog = {
             btnAccept.type = "button";
             btnAccept.value = this.key;
             if (event == null) {
-                console.log("null");
                 btnAccept.addEventListener("click", function () {
                     Modal.close(this.value);
                 });
@@ -189,8 +187,4 @@ var Dialog = {
         let dialog = document.getElementById("neon-modal-" + key);
         dialog.remove();
     }
-}
-
-function dialog() {
-    return Dialog;
 }

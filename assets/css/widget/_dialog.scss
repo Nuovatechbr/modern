@@ -13,7 +13,7 @@
         div.neon-dialog__header {
             color: var(--dialog-header-color);
             height: min-content;
-            padding: 40px 15px 10px 15px;
+            padding: 20px 15px 10px 15px;
             text-align: center;
 
             *.neon-dialog__header__title {
@@ -99,5 +99,11 @@
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    div.neon-dialog {
+        max-width: 280px;
     }
 }

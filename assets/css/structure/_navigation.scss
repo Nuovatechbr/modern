@@ -1,0 +1,92 @@
+@media all {
+    aside.modern-template-sidebar {
+        &.hide {
+            width: 0 !important;
+        }
+        transition: all 0.3s;
+    }
+
+    nav.modern-navigation {
+        ul.modern-navigation-ul {
+            font-size: 16px;
+            font-weight: 500;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li.modern-navigation-li,
+            li.modern-navigation-li-parent {
+                cursor: pointer;
+                display: flex;
+                flex-direction: column;
+                font-size: inherit !important;
+                list-style: none;
+                list-style: none;
+                height: 40px;
+
+                &:hover {
+                    background-color: var(--secondary-color);
+                    // transition: ease-in-out 0.2s;
+                }
+            }
+
+            li.modern-navigation-li-parent {
+                &.show {
+                    background-color: rgba(0, 0, 0, 0.5);
+                    a.modern-navigation-parent {
+                        background-color: var(--secondary-color);
+                    }
+                    a.modern-navigation-child {
+                        display: block !important;
+                        &:hover {
+                            background-color: #2c2c2c;
+                            // transition: ease-in-out 0.2s;
+                        }
+                    }
+                }
+            }
+
+            a.modern-navigation-link,
+            a.modern-navigation-parent,
+            a.modern-navigation-child {
+                color: var(--navigation-link-color);
+                font-family: inherit !important;
+                font-size: 16px;
+                line-height: 20px;
+                padding: 10px 15px;
+                text-decoration: none;
+
+                &[class^="icon-"],
+                &[class*=" icon-"] {
+                    // &::before {
+                    //     padding-right: 14px !important;
+                    // }
+                }
+
+                // &::before {
+                //     content: "";
+                //     font-family: "neonico";
+                //     font-size: 16px;
+                //     line-height: 20px;
+                // }
+            }
+
+            i.modern-navigation-parent-arrow::before {
+                float: right;
+                margin-top: 5px;
+                transition: all 0.3s;
+            }
+
+            a.modern-navigation-parent.show i::before{
+                transform: rotate(180deg);
+            }
+
+            li.modern-navigation-li-parent {
+                height: auto !important;
+                a.modern-navigation-child {
+                    display: none;
+                }
+            }
+        }
+    }
+}

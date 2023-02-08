@@ -1,0 +1,74 @@
+/**
+* @desc: estilos que definem os botões do sistema como um todo
+**/
+@media all {
+    button.modern-btn,
+    input[type="button"].modern-btn,
+    input[type="submit"].modern-btn {
+        background-repeat: no-repeat;
+        border: 0;
+        cursor: pointer;
+        filter: opacity(0.8);
+        font-weight: bold;
+
+        // definições dos estados dos botões
+        &:active,
+        &:focus,
+        &:hover {
+            filter: opacity(100);
+            transition: ease-in 0.3s;
+        }
+
+        // Definição de botões de ação sistêmcica
+        &.--cancel {
+            background-color: var(--btn-cancel);
+            color: var(--btn-cancel-text-color);
+        }
+        &.--confirm {
+            background-color: var(--btn-confirm);
+            color: var(--btn-confirm-text-color);
+        }
+        &.--return {
+            background-color: var(--btn-return);
+            color: var(--btn-return-text-color);
+        }
+
+        // Shape
+        &.btn-shape-circle {
+            border-radius: 100% !important;
+        }
+        &.btn-shape-pill {
+            border-radius: 50px !important;
+        }
+        &.btn-shape-smooth {
+            border-radius: 3px !important;
+        }
+        &.btn-shape-square {
+            border-radius: 0px !important;
+        }
+
+        // Size
+        &.btn-size-fixed {
+            height: initial !important;
+        }
+        &.btn-size-great {
+            font-weight: 400;
+            letter-spacing: 0.5pt;
+            padding: 16px !important;
+            width: 100% !important;
+        }
+        &.btn-size-large {
+            padding: 7.5px 10px;
+            width: 100% !important;
+        }
+        &.btn-size-mid {
+            min-width: 80px;
+            width: max-content;
+            padding: 10px 12px;
+        }
+        &.btn-size-small {
+            min-width: auto;
+            padding: 5px;
+        }
+    }
+}

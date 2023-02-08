@@ -1,0 +1,33 @@
+:root {
+    --color-emerald: rgb(49, 155, 84);
+    --color-ruby: rgba(153, 12, 65, 1);
+}
+
+@media all {
+    .bg-color-primary {
+        background-color: var(--primary-color) !important;
+    }
+    .bg-color-secondary {
+        background-color: var(--secondary-color) !important;
+    }
+    .bg-color-thirdy {
+    }
+    .bg-color-forth {
+    }
+    .bg-color-fifity {
+    }
+
+    .bg-gradient-primary {
+        background-image: linear-gradient(to left, #1904e590, #11998e90);
+    }
+
+    .bg-color-emerald {
+        background-color: var(--color-emerald) !important;
+    }
+    .bg-color-ruby {
+        background-color: var(--color-ruby) !important;
+    }
+    .text-color-white {
+        color: white;
+    }
+}

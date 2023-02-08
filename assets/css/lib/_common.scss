@@ -1,6 +1,36 @@
+// Border Radius
+*.border-radius-circle {
+    border-radius: 100px !important;
+}
+
+*.border-radius-square {
+    border-radius: 0 !important;
+}
+
+// Figure
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+// Font
+.font-style-italic {
+    font-style: italic;
+}
+
+// Image
+img.rounded-circle {
+    border-radius: 100px;
+}
+
+img.rounded-smooth {
+    border-radius: 5px;
+}
+
+
+
 // Padding
 @for $i from 1 through 50 {
-
     .padding-#{$i * 5} {
         padding: #{$i * 5}px !important;
     }
@@ -30,4 +60,18 @@
         padding-left: #{$i * 5}px !important;
         padding-right: #{$i * 5}px !important;
     }
+}
+
+// Text align
+.text-align-center {
+    text-align: center;
+}
+.text-align-left {
+    text-align: left;
+}
+.text-align-right {
+    text-align: right;
+}
+.text-align-justify {
+    text-align: justify;
 }
