@@ -4,8 +4,6 @@ namespace Nuovatech\Template\Modern;
 
 use \Nuovatech\Neon\Http\Exception as HttpException;
 use \Nuovatech\Neon\View as NeonView;
-use \Nuovatech\Neon\Neon;
-use \Nuovatech\Neon\Tools;
 
 /**
  * Manager the view interface of Neon Viewer Template
@@ -21,6 +19,11 @@ abstract class View extends NeonView
     {
         $path = $_SERVER['REQUEST_SCHEME'] . "://" .  $_SERVER['SERVER_NAME'] .  $_SERVER["REQUEST_URI"] . "public/assets/script/$path.$type";
         print_r("<script src='$path' type='module'></script> \r");
+    }
+
+    public static function navigation()
+    {
+        return Navigation::render();
     }
 
     /**
@@ -47,6 +50,14 @@ abstract class View extends NeonView
         if (!file_exists($view)) {
             HttpException::response(404, "Page not found!");
         }
+
+        if (!empty($vars)) {
+            self::setGlobal($vars);
+        }
+
+        // Define controller vars to view
+        parent::setGlobal($vars);
+        unset($vars);
 
         // Load the content body
         $body = file_get_contents($view);
