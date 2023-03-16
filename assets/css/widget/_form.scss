@@ -1,0 +1,29 @@
+@import "../forms/light";
+@import "../forms/modern";
+
+// General rullings
+@media all {
+    // Resizing textarea
+    textarea.resize-both {
+        resize: both !important;
+    }
+    textarea.resize-horizontal {
+        resize: horizontal !important;
+    }
+    textarea.resize-none {
+        resize: none !important;
+    }
+    textarea.resize-vertical {
+        resize: vertical !important;
+    }
+}
+
+// Hack for Select2
+@media all {
+    .select2-results__options li:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+    .select2-results__option {
+        color: var(--body-color);
+    }
+}

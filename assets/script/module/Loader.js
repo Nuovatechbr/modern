@@ -22,7 +22,7 @@ export var Loader = {
         load.classList.add("c-loader");
         load.id = keyContruct + this.key;
 
-        Modal.open(this.key, load);
+        Modal.open(load, this.key);
     },
 
     stop: function () {

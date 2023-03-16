@@ -1,48 +1,69 @@
 // Import Font
 @font-face {
-    font-family: "neonico";
-    src: url("../fonts/neonico/neonico.eot") format("embedded-opentype"),
-        url("../fonts/neonico/neonico.ttf") format("truetype"), url("../fonts/neonico/neonico.woff") format("woff"),
-        url("../fonts/neonico/neonico.svg") format("svg");
-    font-weight: normal;
-    font-style: normal;
-    font-display: block;
+  font-family: "neonico";
+  src: url("../fonts/neonico/neonico.eot") format("embedded-opentype"),
+    url("../fonts/neonico/neonico.ttf") format("truetype"), url("../fonts/neonico/neonico.woff") format("woff"),
+    url("../fonts/neonico/neonico.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
 }
 
 [class^="icon-"],
 [class*=" icon-"] {
-    /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: "neonico" !important;
-    speak: never;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "neonico" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
 
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-camera:before {
+  content: "\e90a";
+}
+.icon-email:before {
+  content: "\e909";
+}
+.icon-trash:before {
+  content: "\e907";
+}
 .icon-arrow-up:before {
-    content: "\e905";
+  content: "\e905";
 }
 .icon-arrow-down:before {
-    content: "\e906";
-}
-.icon-menu-close:before {
-    content: "\e900" !important;
-}
-.icon-info:before {
-    content: "\e903" !important;
-}
-.icon-logout:before {
-    content: "\e902" !important;
-}
-.icon-menu-open:before {
-    content: "\e901" !important;
+  content: "\e906";
 }
 .icon-user:before {
-    content: "\e904" !important;
+  content: "\e904";
+}
+.icon-info:before {
+  content: "\e903";
+}
+.icon-logout:before {
+  content: "\e902";
+}
+.icon-menu-close:before {
+  content: "\e900";
+}
+.icon-menu-open:before {
+  content: "\e901";
+}
+.icon-edit:before {
+  content: "\e908";
+}
+.icon-fitness:before {
+  content: "\e9b2";
+}
+.icon-instagram:before {
+  content: "\ea92";
+}
+.icon-whatsapp:before {
+  content: "\ea93";
 }

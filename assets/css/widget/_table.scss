@@ -1,7 +1,14 @@
 @media all {
+    table tr.pointer:hover {
+        cursor: pointer;
+    }
     table.modern-table {
         border-collapse: collapse;
         width: 100%;
+
+        &.table-layout-fixed {
+            table-layout: fixed;
+        }
 
         thead.modern-table-thead tr {
             filter: opacity(50%);
@@ -33,6 +40,29 @@
                     padding: 0.55rem;
                 }
             }
+
+            button.modern-table-action {
+                border: 0;
+                border-radius: 100px;
+                cursor: pointer;
+                filter: opacity(80%);
+                font-size: 14px;
+                height: 30px;
+                line-height: 16px;
+                padding: 5px;
+                width: 30px;
+
+                &:hover {
+                    filter: opacity(100%);
+                    transition: ease-in-out 0.3s;
+                }
+            }
         }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    tbody.modern-table-tbody {
+        font-size: 14px !important;
     }
 }

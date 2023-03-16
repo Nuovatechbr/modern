@@ -1,8 +1,5 @@
 <?php
 
-use Nuovatech\Neon\Http\Session;
-use Nuovatech\Neon\Neon;
-use Nuovatech\Neon\Tools;
 use \Nuovatech\Template\Modern\View;
 
 ?>
@@ -14,8 +11,20 @@ use \Nuovatech\Template\Modern\View;
 
     <meta charset="UTF-8">
     <meta content="Nuovatech" name="author">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
     <link href="vendor/nuovatech/modern/assets/css/core.css" rel="stylesheet" type="text/css">
+
+    <?php
+    View::css("core", true);
+    View::extras("Jquery");
+    View::script("core", true);
+    View::global();
+    ?>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="https://fonts.cdnfonts.com/css/roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
     <title><?php View::title(); ?></title>
 
     <!-- Importação do ícone do template. -->
@@ -58,12 +67,14 @@ use \Nuovatech\Template\Modern\View;
             <!-- Content of application -->
             <aside class="modern-template-content">
                 <?php echo View::getBody(); ?>
-
-                <?php /* Tools::dump(Session::getBody(Neon::$app->sessionKey));*/ ?>
             </aside>
         </main>
     </div>
-    <script src="vendor/nuovatech/modern/assets/script/core.js" type="module"></script>
+    <style>
+        .modern-template-main {
+            height: 100vh !important;
+        }
+    </style>
 </body>
 
 </html>

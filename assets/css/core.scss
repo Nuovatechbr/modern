@@ -11,22 +11,30 @@
 @import "structure/navigation";
 
 // Import of widgets css
+@import "widget/alert";
 @import "widget/badge";
 @import "widget/buttons";
 @import "widget/card";
 @import "widget/dialog";
+// @import "widget/flexbox";
+@import "widget/form";
+@import "widget/loader";
 @import "widget/page";
 @import "widget/modal";
+@import "widget/nav";
+@import "widget/pagination";
 @import "widget/table";
+@import "widget/tabs";
+@import "widget/window";
 @import "widget/workspace";
 
 :root {
     --primary-color: #1904e5;
     --secondary-color: #11998e;
     --body-color: #5c5c5c;
-    --btn-cancel: #c0392b;
+    --btn-cancel: #202020; //--c0392b
     --btn-cancel-text-color: rgba(255, 255, 255, 1);
-    --btn-confirm: rgba(0, 89, 72, 1);
+    --btn-confirm: rgb(49, 155, 84);
     --btn-confirm-text-color: rgba(255, 255, 255, 1);
     --btn-return: #efeff2;
     --btn-return-text-color: #5c5c5c;
@@ -43,4 +51,18 @@
     --navigation-link-color: #fff;
     --neon-table-thead-bgc: var(--secondary-color);
     --neon-table-thead-text-color: #fff;
+   
+}
+
+.margin-zero {
+    margin: 0 !important;
+}
+
+p {
+    margin: 0;
+}
+
+.row {
+    margin-left: initial !important;
+    margin-right: initial !important;
 }

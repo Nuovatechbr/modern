@@ -3,6 +3,19 @@
     --color-ruby: rgba(153, 12, 65, 1);
 }
 
+// Gradient colors
+:root {
+    --bg-gradient-carbon: linear-gradient(to left, #00000091, #89999891);
+}
+
+@media all {
+    .bg-carbon {
+        &.gradient-linear {
+            background-image: var(--bg-gradient-carbon);
+        }
+    }
+}
+
 @media all {
     .bg-color-primary {
         background-color: var(--primary-color) !important;
@@ -29,5 +42,11 @@
     }
     .text-color-white {
         color: white;
+    }
+}
+
+@media all {
+    .bg-gradient-linear-theme {
+        background-image: linear-gradient(to left, #1904e590, #11998e90) !important;
     }
 }

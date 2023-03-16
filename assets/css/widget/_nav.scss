@@ -1,0 +1,31 @@
+@media all {
+    .nav {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+
+        .nav-item .nav-link {
+            font-weight: 400;
+        }
+    }
+
+    .nav-link {
+        background-color: transparent;
+        border: 0;
+        display: flex;
+        font-family: inherit;
+        font-size: inherit;
+        align-items: center;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+    }
+
+    .nav-link.active {
+        &::before {
+            opacity: 100% !important;
+        }
+    }
+}

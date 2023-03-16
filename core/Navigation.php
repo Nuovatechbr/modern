@@ -2,6 +2,8 @@
 
 namespace Nuovatech\Template\Modern;
 
+use \Nuovatech\Neon\Neon;
+
 abstract class Navigation
 {
 
@@ -14,24 +16,26 @@ abstract class Navigation
     public static function render()
     {
         $list = '';
+        $url = Neon::directory();
         foreach (self::$nav as $option) {
 
-            // Cria o link para adicionar no objeto de lista
-            if ($option->qtdSubMenu > 0) {
-                $link   = "<a class='modern-navigation-parent' title='$option->title'>$option->label<i class='modern-navigation-parent-arrow icon-arrow-down'></i></a>";
-                foreach (self::$nav as $key => $sub) {
+            if (empty($option->idMenuParent)) {
+                // Cria o link para adicionar no objeto de lista
+                if ($option->qtdSubMenu > 0) {
+                    $link   = "<a class='modern-navigation-parent' title='$option->title'>$option->label<i class='modern-navigation-parent-arrow icon-arrow-down'></i></a>";
+                    foreach (self::$nav as $sub) {
 
-                    if ($sub->idMenuParent == $option->idMenu) {
-                        $link .= "<a class='modern-navigation-child' href='$sub->url' title='$sub->title'>$sub->label</a>";
+                        if ($sub->idMenuParent == $option->idMenu) {
+                            $link .= "<a class='modern-navigation-child' href='$url$sub->url' title='$sub->title'>$sub->label</a>";
+                        }
                     }
+                    $li     = "<li class='modern-navigation-li-parent'>$link</li>";
+                } else {
+                    $link   = "<a class='modern-navigation-child' href='$url$option->url' title='$option->title'>$option->label</a>";
+                    $li     = "<li class='modern-navigation-li'>$link</li>";
                 }
-                $li     = "<li class='modern-navigation-li-parent'>$link</li>";
-            } else {
-                $link   = "<a class='modern-navigation-child' href='$option->url' title='$option->title'>$option->label</a>";
-                $li     = "<li class='modern-navigation-li'>$link</li>";
+                $list   .= $li;
             }
-
-            $list   .= $li;
         }
 
         $ul     =   "<ul class='modern-navigation-ul'>$list</ul>";

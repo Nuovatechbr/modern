@@ -1,0 +1,64 @@
+@media all {
+    .neon-window {
+        animation: window-fade 0.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+        background-color: rgba(255, 255, 255, 1);
+        margin: auto;
+        min-width: 320px;
+        width: max-content;
+
+        &.neon-window-bg-glass {
+            background-color: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(100px);
+        }
+    }
+
+    .neon-window-header,
+    .neon-window-body,
+    .neon-window-footer {
+        padding: 10px 20px;
+    }
+
+    .neon-window-header,
+    .neon-window-body {
+        &.border-underline {
+            border-bottom: 1px solid #f2f2f2;
+        }
+    }
+
+    .neon-window-header-title {
+        filter: opacity(60%);
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 24px;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .neon-window {
+        min-width: initial;
+        max-width: 280px !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .neon-window {
+        margin-bottom: 10vh;
+        min-width: initial;
+        width: calc(100vw - 40px);
+    }
+}
+
+@keyframes window-fade {
+    0% {
+        margin-top: -50px;
+        visibility: hidden;
+        opacity: 0;
+    }
+    100% {
+        margin-top: 10vh;
+        visibility: visible;
+        opacity: 1;
+    }
+}

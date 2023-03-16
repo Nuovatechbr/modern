@@ -4,29 +4,26 @@
         flex-direction: column;
         width: 100%;
     }
-    aside.modern-template-sidebar {
-        background-image: linear-gradient(to left, #1904e590, #11998e90);
-        box-shadow: 7px 0 60px rgba(0, 0, 0, 0.05);
-        margin-top: -60px;
-        max-width: 240px;
-        overflow: hidden;
-        padding-top: 60px;
-        position: relative;
-        transition: all 0.2s;
-        width: 100%;
-        z-index: 11;
-    }
+
     aside.modern-template-content {
-        width: calc(100);
+        overflow-y: auto;
+        transition: ease-in 0.5s;
+        width: calc(100%);
+
+        &.expand {
+            padding-left: 0px !important;
+        }
     }
 }
 
 @media all and (max-width: 799px) {
     aside.modern-template-sidebar {
         height: calc(100% - 60px);
-        padding-top: 60px;
         position: absolute;
-        width: 280px;
+        width: 0;
         z-index: 5;
+    }
+    aside.modern-template-content {
+        padding-left: 0px;
     }
 }

@@ -1,0 +1,98 @@
+// Variáveis
+$grid-columns: 12;
+
+@media all {
+    // Linha
+    .row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .flex-b-0 {
+            flex-basis: auto !important;
+        }
+
+        // Declaração do gap das colunas
+        @for $i from 1 through 5 {
+            &.gap-#{$i * 5} {
+                $gap: $i * 5;
+                gap: #{$gap}px;
+                // @for $c from 1 through $grid-columns {
+                //     $grid-widh: 100% / $grid-columns * $c;
+                //     .col-#{$c} {
+                //         width: #{$grid-widh};
+                //         @if $c == 12 {
+                //             width: #{$grid-widh};
+                //         } @else {
+                //             $diff: ($gap / 12 * $c);
+                //             @if $c <= 4 {
+                //                 $diff: ($gap / 12 * $c) * $c;
+                //             }
+                //             width: calc(#{$grid-widh} - #{$diff}px); //2
+                //         }
+                //     }
+                // }
+            }
+        }
+    }
+
+    // Declaração das colunas
+    @for $i from 1 through $grid-columns {
+        // cálculo da largura dos elementos.
+        $grid-widh: 100% / $grid-columns * $i;
+
+        // Chamada da classe antiga {PARA REMOVER}
+        .col-#{$i} {
+            flex-basis: 0;
+            flex-grow: 1;
+            position: relative;
+            width: #{$grid-widh};
+        }
+    }
+}
+
+// SMARTPHONE
+@media screen and (max-width: 599px) {
+    // Declaração das colunas
+    @for $i from 1 through $grid-columns {
+        // cálculo da largura dos elementos.
+        $grid-widh: 100% / $grid-columns * $i;
+
+        // Chamada da classe antiga {PARA REMOVER}
+        .col-#{$i} {
+            flex-basis: auto;
+            position: relative;
+            width: 100% !important;
+        }
+    }
+
+    @for $i from 1 through $grid-columns {
+        // cálculo da largura dos elementos.
+        $grid-widh: 100% / $grid-columns * $i;
+        .col-md-sm-#{$i} {
+            width: calc(#{$grid-widh} - 2.5px); //2
+        }
+    }
+}
+
+// TABLET
+@media screen and (min-width: 600px) and (max-width: 800px) {
+    @for $i from 1 through $grid-columns {
+        // cálculo da largura dos elementos.
+        $grid-widh: 100% / $grid-columns * $i;
+        .col-md-tb-#{$i} {
+            width: calc(#{$grid-widh} - 5px); //2
+        }
+    }
+}
+
+// LAPTOP
+@media screen and (min-width: 801px) and (max-width: 1200px) {
+    @for $i from 1 through $grid-columns {
+        // cálculo da largura dos elementos.
+        $grid-widh: 100% / $grid-columns * $i;
+        .col-md-lp-#{$i} {
+            width: calc(#{$grid-widh} - 5px); //2
+        }
+    }
+}

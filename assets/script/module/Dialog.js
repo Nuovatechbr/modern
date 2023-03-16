@@ -1,10 +1,6 @@
 import { Modal } from "./Modal.js";
 
-export {
-    Dialog
-}
-
-var Dialog = {
+export var Dialog = {
 
     // Key do dialog
     key: null,
@@ -84,8 +80,64 @@ var Dialog = {
             dialogFooter.append(btnAccept);
 
             // IncluÃ­ a janela no modal
-            Modal.open(this.key, dialog);
+            Modal.open(dialog, this.key);
         }
+    },
+
+    catch: function (error) {
+
+        // Gera a key dinamicamente
+        const keyContruct = "neon-dialog-";
+        this.key = Date.now();
+
+        // ConstruÃ§Ã£o da janela
+        let dialog = document.createElement("div");
+        dialog.classList.add("neon-dialog");
+        dialog.id = keyContruct + this.key;
+
+        //Dialog Header
+        let dialogHeader = document.createElement("div");
+        dialogHeader.classList.add("neon-dialog__header");
+        let dialogHeaderH = document.createElement("h2");
+        dialogHeaderH.classList.add("neon-dialog__header__title");
+        dialogHeaderH.innerHTML = "Javascript";
+        dialogHeader.append(dialogHeaderH);
+        dialog.append(dialogHeader);
+
+        //Dialog Body
+        let dialogBody = document.createElement("div");
+        dialogBody.classList.add("neon-dialog__body");
+        let dialogBodyP = document.createElement("p");
+        dialogBodyP.innerText = error.message;
+        dialogBody.append(dialogBodyP);
+        dialog.append(dialogBody);
+
+        //Dialog Footer
+        let dialogFooter = document.createElement("div");
+        dialogFooter.classList.add("neon-dialog__footer");
+        dialog.append(dialogFooter);
+
+        //Dialog Accept
+        let btnAccept = document.createElement("button");
+        btnAccept.classList.add("neon-dialog__btn");
+        btnAccept.classList.add("--close");
+        btnAccept.innerText = 'Fechar';
+        btnAccept.title = "Fechar Janela";
+        btnAccept.type = "button";
+        btnAccept.value = this.key;
+        if (event == null) {
+            btnAccept.addEventListener("click", function () {
+                Modal.close(this.value);
+            });
+        } else {
+            btnAccept.addEventListener("click", function () {
+                event();
+            });
+        }
+        dialogFooter.append(btnAccept);
+
+        // IncluÃ­ a janela no modal
+        Modal.open(dialog, this.key);
     },
 
     confirm: function (title = "Confirmar?", msg = '', confirmEvent = null, closeEvent = null) {

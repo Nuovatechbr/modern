@@ -1,0 +1,39 @@
+@media all {
+    *.modern-form {
+        input[type="date"].modern-form-date,
+        input[type="email"].modern-form-email,
+        input[type="password"].modern-form-password,
+        input[type="tel"].modern-form-tel,
+        input[type="text"].modern-form-text,
+        select.modern-form-select,
+        textarea.modern-form-textarea {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 14px;
+            line-height: 16px;
+            outline: none;
+            min-height: 20px;
+            padding: 7px;
+            width: calc(100% - 16px);
+
+            &:focus {
+                box-shadow: 0px 0px 3px 0.5px var(--primary-color);
+                transition: all 0.3s;
+            }
+        }
+
+        label.modern-form-label {
+            display: block;
+            filter: opacity(50%);
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 16px;
+            padding: 10px 0;
+        }
+
+        textarea.modern-form-textarea {
+            resize: none;
+        }
+    }
+}

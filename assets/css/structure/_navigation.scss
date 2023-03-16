@@ -1,15 +1,31 @@
 @media all {
     aside.modern-template-sidebar {
-        &.hide {
-            width: 0 !important;
+        background-image: var(--sidebar-bg);
+        backdrop-filter: blur(5px);
+        box-shadow: 7px 0 60px rgba(0, 0, 0, 0.05);
+        display: flex;
+        max-width: 240px;
+        overflow: hidden;
+        transition: ease-in-out 0.5s;
+        width: 240px;
+        z-index: 11;
+
+        nav {
+            display: initial;
         }
-        transition: all 0.3s;
+
+        &.hide {
+            width: 0;
+            nav {
+                display: none;
+            }
+        }
     }
 
     nav.modern-navigation {
         ul.modern-navigation-ul {
             font-size: 16px;
-            font-weight: 500;
+            font-weight: normal;
             list-style: none;
             margin: 0;
             padding: 0;
@@ -26,13 +42,13 @@
 
                 &:hover {
                     background-color: var(--secondary-color);
-                    // transition: ease-in-out 0.2s;
                 }
             }
 
             li.modern-navigation-li-parent {
                 &.show {
                     background-color: rgba(0, 0, 0, 0.5);
+                    transition: ease-in-out 0.5s;
                     a.modern-navigation-parent {
                         background-color: var(--secondary-color);
                     }
@@ -40,7 +56,6 @@
                         display: block !important;
                         &:hover {
                             background-color: #2c2c2c;
-                            // transition: ease-in-out 0.2s;
                         }
                     }
                 }
@@ -77,7 +92,7 @@
                 transition: all 0.3s;
             }
 
-            a.modern-navigation-parent.show i::before{
+            a.modern-navigation-parent.show i::before {
                 transform: rotate(180deg);
             }
 
@@ -88,5 +103,24 @@
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: 799px) {
+    .modern-template-sidebar {
+        display: none;
+        width: 0px !important;
+    }
+    .modern-template-sidebar.show-mobile {
+        display: flex;
+        width: 280px !important;
+        nav {
+            display: initial !important;
+        }
+    }
+    a.modern-navigation-link,
+    a.modern-navigation-parent,
+    a.modern-navigation-child {
+        padding: 12px 15px !important;
     }
 }
