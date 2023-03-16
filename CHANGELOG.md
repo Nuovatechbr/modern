@@ -1,6 +1,12 @@
 ## [0.1.0.20230316]
 
 ## Add
+
+- Adicionado bootstrap v4.0
+
+## [0.1.0.20230316]
+
+## Add
 - Adicionados novos recursos para versão alfa
 
 ## [0.1.0.20230119]

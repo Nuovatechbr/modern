@@ -15,7 +15,8 @@
     },
     "require": {
         "php": ">=7.4",
-        "nuovatech/neon": "dev-master"
+        "nuovatech/neon": "dev-master",
+        "twbs/bootstrap": "4.6.2"
     },
     "version": "1.0.0.20230119"
 }
